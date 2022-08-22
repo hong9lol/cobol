@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>코드볼래</title>
-  </head>
-  <script src="popup.js"></script>
-  <body>
-    <h2>Selected Code Page</h2>
-    <div class="center"></div>
-  </body>
+
+</head>
+<script src="popup.js"></script>
+<style type="text/css">
+    body {
+        min-width: 1005px;
+        /* your desired width */
+        max-width: 150%;
+        position: relative;
+        vertical-align: middle;
+    }
+</style>
+
+<body>
+    <div id="content" class="center">
+        <p id="init_text"> loding...</p>
+    </div>
+</body>
+
 </html>
