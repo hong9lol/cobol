@@ -3,7 +3,7 @@
 
 ### What Cobol is
 - 각 Commit에서 발생한 코드 변경 내역을 간략하고 빠르게 보여줍니다.
-![alt text](https://github.com/hong9lol/cobol/images/cobol.jpeg)
+![alt text](https://github.com/hong9lol/cobol/blob/main/images/cobol.jpeg)
 
 <hr>
 
