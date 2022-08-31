@@ -5,51 +5,30 @@ chrome.tabs.query({ currentWindow: true, active: true }, function(tabs) {
     });
 
     chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+        document.body.style.minWidth = "800px";
         let html = httpGet(request.addr)
 
         htmlDocument = document.implementation.createHTMLDocument("Cobol");
         htmlDocument.body.innerHTML = html
 
-        header = htmlDocument.getElementsByClassName("Header")[0]
-        header.innerHTML = ''
-        header.removeAttribute("class")
+        removeComponentWithClassName("Header");
+        removeComponentWithClassName("Header-old");
+        removeComponentWithClassName("Layout-sidebar");
+        removeComponentWithClassName("thread-subscription-status");
+        removeComponentWithClassName("footer");
+        removeComponentWithClassName("pr-toolbar");
+        removeComponentClassWithClassName("Layout");
+        removeComponentWithId("repository-container-header")
+        removeComponentWithId("toc")
+        removeComponentWithId("all_commit_comments")
 
-        containerHeader = htmlDocument.getElementById("repository-container-header")
-        containerHeader.innerHTML = ''
-        containerHeader.removeAttribute("class")
-
-        sidebar = htmlDocument.getElementsByClassName("Layout")[0]
-        sidebar.removeAttribute("class")
-
-        sidebarCtx = htmlDocument.getElementsByClassName("Layout-sidebar")[0]
-        sidebarCtx.innerHTML = ''
-        sidebarCtx.removeAttribute("class")
-
-        htmlDocument.getElementsByClassName("btn btn-outline float-right")[0].style.visibility = "hidden";
-
-        toc = htmlDocument.getElementById("toc")
-        toc.innerHTML = ''
-        toc.removeAttribute("class")
-
-        comment = htmlDocument.getElementById("all_commit_comments")
-        comment.innerHTML = ''
-        comment.removeAttribute("class")
-
-        subscription = htmlDocument.getElementsByClassName("thread-subscription-status")[0]
-        subscription.innerHTML = ''
-        subscription.removeAttribute("class")
-
-        footer = htmlDocument.getElementsByClassName("footer")[0]
-        footer.innerHTML = ''
-        footer.removeAttribute("class")
+        btn = htmlDocument.getElementsByClassName("btn btn-outline float-right")
+        if (btn.length > 0) {
+            btn[0].style.visibility = "hidden";
+        }
 
         aTags = htmlDocument.getElementsByTagName("a")
         for (i = 0; i < aTags.length; i++) { aTags[i].setAttribute("href", "") }
-
-        let toolbar = htmlDocument.getElementsByClassName("pr-toolbar")[0]
-        toolbar.removeAttribute("class")
-        toolbar.removeAttribute("data-target")
-        toolbar.removeAttribute("style")
 
         document.getElementById("content").innerHTML = ''
         document.getElementById("content").appendChild(htmlDocument.body)
@@ -61,4 +40,31 @@ function httpGet(url) {
     xmlHttp.open("GET", url, false);
     xmlHttp.send(null);
     return xmlHttp.responseText;
+}
+
+function removeComponentWithClassName(name) {
+    comp = htmlDocument.getElementsByClassName(name)
+    if (comp.length > 0) {
+        for (i = 0; i < comp.length; i++) {
+            comp[i].innerHTML = ''
+            comp[i].removeAttribute("class")
+        }
+    }
+}
+
+function removeComponentClassWithClassName(name) {
+    comp = htmlDocument.getElementsByClassName(name)
+    if (comp.length > 0) {
+        for (i = 0; i < comp.length; i++) {
+            comp[i].removeAttribute("class")
+        }
+    }
+}
+
+function removeComponentWithId(id) {
+    comp = htmlDocument.getElementById(id)
+    if (comp != null) {
+        comp.innerHTML = ''
+        comp.removeAttribute("class")
+    }
 }
