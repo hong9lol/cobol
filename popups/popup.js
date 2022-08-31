@@ -4,6 +4,13 @@ chrome.tabs.query({ currentWindow: true, active: true }, function(tabs) {
         files: ["content/js/init.js"],
     });
 
+    chrome.cookies.getAll({
+        url: "https://www.naver.com"
+    }, function(theCookies) {
+        cookies = theCookies
+        console.log(cookies)
+    });
+
     chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         document.body.style.minWidth = "800px";
         let html = httpGet(request.addr)

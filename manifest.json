@@ -1,23 +1,25 @@
 {
-  "name": "CoBol",
-  "version": "1.0",
-  "manifest_version": 3,
-  "background": {
-    "service_worker": "background.js"
-  },
-  "action": {
-    "default_popup": "popups/popup.html"
-  },
-  "commands": {
-    "_execute_action": {
-      "suggested_key": {
-        "default": "Alt+C",
-        "mac": "Alt+C"
-      }
-    }
-  },
-  "permissions": [
-    "activeTab",
-    "scripting"
-  ]
+    "name": "CoBol",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popups/popup.html"
+    },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Alt+C",
+                "mac": "Alt+C"
+            }
+        }
+    },
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "cookies",
+        "*://*.google.com"
+    ]
 }
