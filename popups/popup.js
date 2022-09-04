@@ -5,8 +5,7 @@ chrome.tabs.query({ currentWindow: true, active: true }, function(tabs) {
     });
 
     chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-        document.body.style.minWidth = "400px"
-            // document.body.style.minWidth = "800px";
+        document.body.style.minWidth = "800px";
 
         htmlDocument = document.implementation.createHTMLDocument("Cobol");
         htmlDocument.body.innerHTML = request.html
