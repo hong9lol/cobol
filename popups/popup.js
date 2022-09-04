@@ -4,19 +4,12 @@ chrome.tabs.query({ currentWindow: true, active: true }, function(tabs) {
         files: ["content/js/init.js"],
     });
 
-    chrome.cookies.getAll({
-        url: "https://www.naver.com"
-    }, function(theCookies) {
-        cookies = theCookies
-        console.log(cookies)
-    });
-
     chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-        document.body.style.minWidth = "800px";
-        let html = httpGet(request.addr)
+        document.body.style.minWidth = "400px"
+            // document.body.style.minWidth = "800px";
 
         htmlDocument = document.implementation.createHTMLDocument("Cobol");
-        htmlDocument.body.innerHTML = html
+        htmlDocument.body.innerHTML = request.html
 
         removeComponentWithClassName("Header");
         removeComponentWithClassName("Header-old");
@@ -41,13 +34,6 @@ chrome.tabs.query({ currentWindow: true, active: true }, function(tabs) {
         document.getElementById("content").appendChild(htmlDocument.body)
     });
 })
-
-function httpGet(url) {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", url, false);
-    xmlHttp.send(null);
-    return xmlHttp.responseText;
-}
 
 function removeComponentWithClassName(name) {
     comp = htmlDocument.getElementsByClassName(name)

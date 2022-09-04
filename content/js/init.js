@@ -11,8 +11,16 @@ var commits = document.getElementsByClassName(
 for (var i = 0; i < commits.length; i++) {
     commits[i].onmouseover = function() {
         console.log(this.href)
-        chrome.runtime.sendMessage({ addr: this.href }, function(ack) {
+        let html = httpGet(this.href)
+        chrome.runtime.sendMessage({ html: html }, function(ack) {
             // TODO
         });
     };
+}
+
+function httpGet(url) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", url, false);
+    xmlHttp.send(null);
+    return xmlHttp.responseText;
 }

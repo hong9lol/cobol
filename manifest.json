@@ -19,7 +19,6 @@
     "permissions": [
         "activeTab",
         "scripting",
-        "cookies",
-        "*://*.google.com"
+        "cookies"
     ]
 }
