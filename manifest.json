@@ -19,7 +19,6 @@
     "permissions": [
         "activeTab",
         "scripting",
-        "cookies",
         "https://assets.github.sec.samsung.net/assets/*"
     ],
 
