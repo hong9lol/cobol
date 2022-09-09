@@ -9,10 +9,11 @@
 <hr>
 
 ### How to use
-1. [크롬 웹 스토어](https://chrome.google.com/webstore)에서 ["Cobol"](https://chrome.google.com/webstore/detail/cobol/bpfpahcicnehjobeookoifdpfabjncda?hl=ko)을 검색하여 설치합니다. 
+1. [크롬 웹 스토어](https://chrome.google.com/webstore)에서 [Cobol](https://chrome.google.com/webstore/detail/cobol/bpfpahcicnehjobeookoifdpfabjncda?hl=ko)을 검색하여 설치합니다. 
 2. Github commit list 페이지(e.g. 아래 이미지 참조)에서 "Alt + c" 또는 브라우저 우측 상단 크롬 확장 프로그램에서 Cobol을 실행합니다. 
 3. Commit Title에 마우스 커서를 올리면 해당 commit에서 발생한 Diff를 확인할 수 있습니다.
 
+<br>
 ![image](https://user-images.githubusercontent.com/16553115/189249491-05a00a71-15bb-451b-bca2-56620e765ff7.png)
 
 <hr>
