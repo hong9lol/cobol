@@ -8,12 +8,12 @@
 
 <hr>
 
-### How to use
+### How to install & use
 1. [크롬 웹 스토어](https://chrome.google.com/webstore)에서 [Cobol](https://chrome.google.com/webstore/detail/cobol/bpfpahcicnehjobeookoifdpfabjncda?hl=ko)을 검색하여 설치합니다. 
-2. Github commit list 페이지(e.g. 아래 이미지 참조)에서 "Alt + c" 또는 브라우저 우측 상단 크롬 확장 프로그램에서 Cobol을 실행합니다. 
+2. Github commit list 페이지(e.g. 아래 이미지 참조)에서 브라우저 우측 상단에 있는 Cobol App을 클릭하거나 단축키("Alt + c")를 통해  Cobol을 실행합니다. 
 3. Commit Title에 마우스 커서를 올리면 해당 commit에서 발생한 Diff를 확인할 수 있습니다.
 
-![image](https://user-images.githubusercontent.com/16553115/189249896-3a6b1358-f494-4523-9efc-754795752f33.png)
+![image](https://user-images.githubusercontent.com/16553115/189250308-c67fbc8c-5e86-4433-901b-c174e51db976.png)
 
 <hr>
 
