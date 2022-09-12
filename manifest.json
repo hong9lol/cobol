@@ -16,6 +16,10 @@
             }
         }
     },
+    "icons": {
+        "16": "images/Cobol_icon.png",
+        "128": "images/Cobol_icon.png"
+    },
     "permissions": [
         "activeTab",
         "scripting",
