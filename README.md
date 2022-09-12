@@ -15,7 +15,7 @@
 
 ![image](https://user-images.githubusercontent.com/16553115/189250308-c67fbc8c-5e86-4433-901b-c174e51db976.png)
 
-[See video guide](https://www.youtube.com/watch?v=IvtW7jZvxqk)
+[See video guide](https://youtu.be/dLpdc2cuS9A)
 
 <hr>
 
