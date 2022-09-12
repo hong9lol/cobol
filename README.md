@@ -2,7 +2,7 @@
 <hr>
 
 ### What Cobol is
-- 각 Commit에서 발생한 코드 변경 내역을 간략하고 빠르게 보여줍니다.
+- 각 Commit에서 발생한 코드 변경 내역을 간략하고 빠르게 보여줍니다
   
 ![image](https://user-images.githubusercontent.com/16553115/189250658-6cb75136-fb43-460b-9723-143b1fb67db4.png)
 
