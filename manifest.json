@@ -22,9 +22,7 @@
     },
     "permissions": [
         "activeTab",
-        "scripting",
-        "https://assets.github.sec.samsung.net/assets/*",
-        "https://avatars.github.sec.samsung.net/*"
+        "scripting"
     ],
 
     "host_permissions": [
