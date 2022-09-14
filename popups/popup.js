@@ -12,6 +12,7 @@ chrome.tabs.query({ currentWindow: true, active: true }, function(tabs) {
 
         removeComponentWithClassName("Header");
         removeComponentWithClassName("Header-old");
+        removeComponentWithClassName("file-header");
         removeComponentWithClassName("Layout-sidebar");
         removeComponentWithClassName("thread-subscription-status");
         removeComponentWithClassName("footer");
